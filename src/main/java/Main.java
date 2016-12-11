@@ -21,7 +21,7 @@ public class Main {
     staticFileLocation("/public");
 
    
-     get("/Hello", (request, response) -> {
+     get("Hello", (request, response) -> {
         Map<String, Object> attributes = new HashMap<>();
         attributes.put("message", "Hello World!");
        
