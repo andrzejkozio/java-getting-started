@@ -51,16 +51,4 @@ public class Main {
           output.add( "Read from DB: " + rs.getTimestamp("tick"));
         }
 
-        attributes.put("results", output);
-        return new ModelAndView(attributes, "db.ftl");
-      } catch (Exception e) {
-        attributes.put("message", "There was an error: " + e);
-        return new ModelAndView(attributes, "error.ftl");
-      } finally {
-        if (connection != null) try{connection.close();} catch(SQLException e){}
-      }
-    }, new FreeMarkerEngine());
-
-  }
-
-}
+        
