@@ -46,9 +46,11 @@ public class Main {
         stmt.executeUpdate("INSERT INTO ticks VALUES (now())");
         ResultSet rs = stmt.executeQuery("SELECT tick FROM ticks");
 
-        ArrayList<String> output = new ArrayList<String>();
-        while (rs.next()) {
-          output.add( "Read from DB: " + rs.getTimestamp("tick"));
-        }
+        
+    }, new FreeMarkerEngine());
+
+  }
+
+}
 
         
